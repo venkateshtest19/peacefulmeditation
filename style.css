@@ -1310,3 +1310,21 @@ footer {
     margin: 0 10px 10px 0;
   }
 }
+/* ===== LOGO STYLES ===== */
+.nav-logo {
+  height: 60px; /* Adjust this number if logo is too big/small in header */
+  width: auto;
+  display: block;
+}
+
+.footer-logo {
+  height: 80px; /* Adjust this number if logo is too big/small in footer */
+  width: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Hide the old text/emoji logo */
+.logo-icon, .logo-text {
+  display: none;
+}
