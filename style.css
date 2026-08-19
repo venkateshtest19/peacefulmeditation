@@ -1312,19 +1312,24 @@ footer {
 }
 /* ===== LOGO STYLES ===== */
 .nav-logo {
-  height: 60px; /* Adjust this number if logo is too big/small in header */
+  height: 60px;
   width: auto;
   display: block;
 }
 
 .footer-logo {
-  height: 80px; /* Adjust this number if logo is too big/small in footer */
+  height: 80px;
   width: auto;
   display: block;
   margin-bottom: 15px;
+  
+  /* NEW CODE FOR WHITE BACKGROUND */
+  background-color: #ffffff; 
+  padding: 10px;           /* Adds space around the logo so it doesn't touch the edges */
+  border-radius: 8px;      /* Makes the corners slightly rounded for a modern look */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
 }
 
-/* Hide the old text/emoji logo */
 .logo-icon, .logo-text {
   display: none;
 }
