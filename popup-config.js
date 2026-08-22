@@ -143,7 +143,7 @@ const popupConfig = {
   // 📝 CONTENT & LINKS
   content: {
     // Image Settings (Leave imageUrl empty "" to hide image)
-    imageUrl: "https://images.unsplash.com/photo-1545205597-3d9d02c24597?w=400&h=300&fit=crop",
+    imageUrl: "https://raw.githubusercontent.com/venkateshtest19/peacefulmeditation/refs/heads/main/PopupImage1.avif",
     imageAlt: "Meditation Offer",
     
     // Text Content
