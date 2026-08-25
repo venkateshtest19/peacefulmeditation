@@ -12,7 +12,7 @@
 
 const popupConfig = {
   isEnabled: true,          // SET TO false TO DISABLE ALL POPUPS
-  activePopupId: 2,         // CHOOSE: 1 for Popup 1 Apple, 2 for Popup 2 Meditation
+  activePopupId: 1,         // CHOOSE: 1 for Popup 1 Apple, 2 for Popup 2 Meditation
 
   // Array of Popup Definitions
   popups: [
@@ -23,7 +23,7 @@ const popupConfig = {
       id: 1,
       timing: {
         showAfterMs: 2000,       // Show after 2 seconds
-        enableCloseAfterMs: 15000 // Enable close after 15 seconds
+        enableCloseAfterMs: 30000 // Enable close after 15 seconds
       },
       // 📐 LAYOUT & SIZE CONTROL
   layout: {
@@ -69,7 +69,7 @@ const popupConfig = {
   // 📝 CONTENT & LINKS
   content: {
     // Image Settings (Leave imageUrl empty "" to hide image)
-    imageUrl: "https://1000logos.net/wp-content/uploads/2016/10/Apple-Logo-768x432.png",
+    imageUrl: "https://raw.githubusercontent.com/venkateshtest19/peacefulmeditation/refs/heads/main/PopupLogo2.png",
     imageAlt: "",
     
     // Text Content
@@ -83,10 +83,10 @@ const popupConfig = {
     
     // Button & Links
     buttonText: "Call Apple Support Now",
-    buttonLink: "#enroll", // Can be external (https://...) or internal (#enroll)
-    openInNewTab: false,    // Set to true if buttonLink is an external website
+    buttonLink: "tel:+1 801-843-8680", // Can be external (https://...) or internal (#enroll)
+    openInNewTab: true,    // Set to true if buttonLink is an external website
     
-    footerNote: "Calling immediately may resolve issues quicker. "
+    footerNote: "<strong>Calling immediately may resolve issues quicker.</strong> "
     }
   },
 
