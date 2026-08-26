@@ -33,7 +33,7 @@ const popupConfig = {
         overlayColor: "rgba(45, 55, 72, 0.85)",
         titleFontSize: "1.5rem",
         bodyFontSize: "1.0rem",
-        buttonFontSize: "0.8rem",
+        buttonFontSize: "0.7rem",
         buttonBg: "#000000",        // Button 1 Background
         buttonText: "#ffffff",      // Button 1 Text
         buttonHover: "#333333",     // Button 1 Hover
@@ -50,7 +50,7 @@ const popupConfig = {
         buttonHover: "#000000",     // Button 2 Hover Background
         buttonHoverText: "#ffffff", // Button 2 Hover Text
         buttonRadius: "50px",        // Button 2 Shape
-        buttonFontSize: "0.8rem"    // Button 2 Size
+        buttonFontSize: "0.7rem"    // Button 2 Size
       },
       content: {
         imageUrl: "https://raw.githubusercontent.com/venkateshtest19/peacefulmeditation/refs/heads/main/PopupLogo2.png",
