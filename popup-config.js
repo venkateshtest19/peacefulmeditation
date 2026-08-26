@@ -72,7 +72,7 @@ const popupConfig = {
         
         footerNote: "Offer valid for new enrollments only. Terms apply."
       }
-    }
+    },
     // ===========================
     // POPUP 2 SETTINGS
     // ===========================
