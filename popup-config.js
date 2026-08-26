@@ -154,7 +154,12 @@ const popupConfig = {
     //codeLabel: "Use Promo Code:",
     //codeValue: "PEACE20", 
     
-    // Button & Links
+    // Button & Links1
+    buttonText: "Claim My Discount",
+    buttonLink: "#enroll", // Can be external (https://...) or internal (#enroll)
+    openInNewTab: false,    // Set to true if buttonLink is an external website
+
+    // Button & Links2
     buttonText: "Claim My Discount",
     buttonLink: "#enroll", // Can be external (https://...) or internal (#enroll)
     openInNewTab: false,    // Set to true if buttonLink is an external website
