@@ -1,7 +1,7 @@
 /* 
   =========================================
-  MULTI-POPUP LOADER ENGINE
-  Reads specific popup data based on activePopupId
+  DYNAMIC POPUP LOADER ENGINE
+  Supports Dual Buttons with Independent Styling
   =========================================
 */
 
@@ -11,19 +11,17 @@
     // 1. Check Config & Select Active Popup
     if (typeof popupConfig === 'undefined' || !popupConfig.isEnabled) return;
     
-    // Determine which popup object to use (Index is ID - 1)
     const activeIndex = popupConfig.activePopupId - 1;
     const currentPopup = popupConfig.popups[activeIndex];
-
-    // If the selected ID doesn't exist, stop
     if (!currentPopup) return;
 
     const l = currentPopup.layout;
     const s = currentPopup.styling;
+    const ss = currentPopup.secondaryStyling; // Secondary Styles
     const c = currentPopup.content;
     const t = currentPopup.timing;
 
-    // 2. Create Dynamic CSS based on Config
+    // 2. Create Dynamic CSS
     const style = document.createElement('style');
     
     let justify = "center";
@@ -98,6 +96,7 @@
         display: inline-block; 
       }
       
+      /* PRIMARY BUTTON STYLES */
       .pm-btn-primary { 
         display: inline-block; 
         padding: 16px 32px; 
@@ -114,6 +113,29 @@
         margin-top: 10px; 
       }
       .pm-btn-primary:hover { background: ${s.buttonHover}; transform: translateY(-2px); }
+
+      /* SECONDARY BUTTON STYLES (Dynamic from Config) */
+      .pm-btn-secondary { 
+        display: inline-block; 
+        padding: 14px 30px; 
+        background: ${ss.buttonBg}; 
+        color: ${ss.buttonText}; 
+        border: 2px solid ${ss.buttonBorder};
+        border-radius: ${ss.buttonRadius}; 
+        font-weight: 600; 
+        font-size: ${ss.buttonFontSize};
+        text-decoration: none; 
+        transition: all 0.3s; 
+        width: 100%; 
+        margin-top: 10px; 
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .pm-btn-secondary:hover { 
+        background: ${ss.buttonHover}; 
+        color: ${ss.buttonHoverText};
+        transform: translateY(-2px); 
+      }
       
       .pm-footer-note { font-size: 0.85rem; color: #999; margin-top: 15px; font-style: italic; }
       
@@ -135,30 +157,9 @@
     overlay.className = 'pm-popup-overlay';
     overlay.id = 'pm-global-popup';
     
-    const targetAttr = c.openInNewTab ? 'target="_blank" rel="noopener"' : '';
-    const codeHtml = c.codeValue ? `
-      <div class="pm-code-container">
-        <span class="pm-code-label">${c.codeLabel}</span>
-        <span class="pm-code-badge">${c.codeValue}</span>
-      </div>
-    ` : '';
-
-    overlay.innerHTML = `
-      <div class="pm-popup-box">
-        <button id="pm-close-x" class="pm-close-btn" aria-label="Close">×</button>
-        
-        ${c.imageUrl ? `<img src="${c.imageUrl}" alt="${c.imageAlt}" class="pm-popup-img">` : ''}
-        
-        <h3 class="pm-popup-title">${c.title}</h3>
-        <p class="pm-popup-msg">${c.message}</p>
-        
-        ${codeHtml}
-        
-           // Determine if links open in new tab
     const targetAttr1 = c.openInNewTab ? 'target="_blank" rel="noopener"' : '';
     const targetAttr2 = c.secondaryOpenInNewTab ? 'target="_blank" rel="noopener"' : '';
 
-    // Conditional Code Badge
     const codeHtml = c.codeValue ? `
       <div class="pm-code-container">
         <span class="pm-code-label">${c.codeLabel}</span>
@@ -166,7 +167,7 @@
       </div>
     ` : '';
 
-    // Conditional Second Button
+    // Only render Second Button if text exists
     const secondBtnHtml = c.secondaryButtonText ? `
       <a href="${c.secondaryButtonLink}" ${targetAttr2} class="pm-btn-secondary" onclick="closePMPopup()">
         ${c.secondaryButtonText}
@@ -187,18 +188,15 @@
         <!-- Primary Button -->
         <a href="${c.buttonLink}" ${targetAttr1} class="pm-btn-primary" onclick="closePMPopup()">${c.buttonText}</a>
         
-        <!-- Secondary Button (Only shows if text is provided) -->
+        <!-- Secondary Button -->
         ${secondBtnHtml}
         
         <p class="pm-footer-note">${c.footerNote}</p>
       </div>
     `;
-        <p class="pm-footer-note">${c.footerNote}</p>
-      </div>
-    `;
     document.body.appendChild(overlay);
 
-    // 4. Logic: Show & Timer using Current Popup's Timing
+    // 4. Logic: Show & Timer
     const closeBtn = document.getElementById('pm-close-x');
     
     setTimeout(() => {
