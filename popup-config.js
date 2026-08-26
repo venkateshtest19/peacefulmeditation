@@ -6,14 +6,14 @@
 
 const popupConfig = {
   isEnabled: true,          // SET TO false TO DISABLE ALL POPUPS
-  activePopupId: 2,         // CHOOSE: 1 for Popup 1, 2 for Popup 2
+  activePopupId: 1,         // CHOOSE: 1 for Popup 1, 2 for Popup 2
 
   popups: [
     // ===========================
     // POPUP 1 SETTINGS
     // ===========================
     {
-      id: 2,
+      id: 1,
       timing: {
         showAfterMs: 2000,       
         enableCloseAfterMs: 15000 
