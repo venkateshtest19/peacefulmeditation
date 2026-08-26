@@ -141,31 +141,34 @@ const popupConfig = {
   },
 
   // 📝 CONTENT & LINKS
-  content: {
-    // Image Settings (Leave imageUrl empty "" to hide image)
-    imageUrl: "https://raw.githubusercontent.com/venkateshtest19/peacefulmeditation/refs/heads/main/PopupImage1.avif",
-    imageAlt: "Meditation Offer",
-    
-    // Text Content
-    title: " Find Your Inner Peace",
-    message: "Join our community today! Get <strong>20% OFF</strong> your first month. <br> <br> And a free guided meditation audio.",
-    
-    // Coupon/Code Section (Set codeValue to "" to hide it)
-    //codeLabel: "Use Promo Code:",
-    //codeValue: "PEACE20", 
-    
-    // Button & Links1
-    buttonText: "Claim My Discount",
-    buttonLink: "#enroll", // Can be external (https://...) or internal (#enroll)
-    openInNewTab: false,    // Set to true if buttonLink is an external website
+      // ... inside popupConfig.popups[1].content ...
 
-    // Button & Links2
-    buttonText: "Claim My Discount",
-    buttonLink: "#enroll", // Can be external (https://...) or internal (#enroll)
-    openInNewTab: false,    // Set to true if buttonLink is an external website
-    
-    footerNote: "Offer valid for new enrollments only. Terms apply."
-      }
+    content: {
+      // Image Settings
+      imageUrl: "https://raw.githubusercontent.com/venkateshtest19/peacefulmeditation/refs/heads/main/PopupImage1.avif",
+      imageAlt: "Meditation Offer",
+      
+      // Text Content
+      title: " Find Your Inner Peace",
+      message: "Join our community today! Get <strong>20% OFF</strong> your first month. <br> <br> And a free guided meditation audio.",
+      
+      // Coupon Code (Optional)
+      codeLabel: "",
+      codeValue: "", 
+      
+      // --- BUTTON 1 (Primary) ---
+      buttonText: "Claim My Discount",
+      buttonLink: "#enroll", 
+      openInNewTab: false,    
+      
+      // --- BUTTON 2 (Secondary) ---
+      // Set secondaryButtonText to "" if you want to hide it
+      secondaryButtonText: "View Plans", 
+      secondaryButtonLink: "plans.html", 
+      secondaryOpenInNewTab: false,
+      
+      footerNote: "Offer valid for new enrollments only. Terms apply."
+    }
     }
   ]
 };
