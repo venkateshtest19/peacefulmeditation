@@ -6,7 +6,7 @@
 
 const popupConfig = {
   isEnabled: true,          // SET TO false TO DISABLE ALL POPUPS
-  activePopupId: 1,         // CHOOSE: 1 for Popup 1, 2 for Popup 2
+  activePopupId: 2,         // CHOOSE: 1 for Popup 1, 2 for Popup 2
 
   popups: [
     // ===========================
