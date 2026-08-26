@@ -32,7 +32,7 @@ const popupConfig = {
         bgColor: "#fefcf9",
         overlayColor: "rgba(45, 55, 72, 0.85)",
         titleFontSize: "1.5rem",
-        bodyFontSize: "1.0rem",
+        bodyFontSize: "0.9rem",
         buttonFontSize: "0.7rem",
         buttonBg: "#000000",        // Button 1 Background
         buttonText: "#ffffff",      // Button 1 Text
@@ -56,12 +56,12 @@ const popupConfig = {
         imageUrl: "https://raw.githubusercontent.com/venkateshtest19/peacefulmeditation/refs/heads/main/PopupLogo2.png",
         imageAlt: "",
         title: "Apple Pay Notification",
-        message: "Your Pre Autherized Order is Placed Successfuly Charges <strong>$199</strong> Will Be Deducted Sooner.<br><br> If This Order Is Not Placed By You Kindly Contact Apple Support Immediatley.<br>Find The Toll Free Number Below.",
+        message: "Your Pre Autherized Order is Placed Successfuly Charges <strong>$199</strong> Will Be Deducted Sooner.<br><br> If This Order Is Not Placed By You Kindly Contact Apple Support Immediatley.<br>Find The Apple Toll Free Number Below.",
         codeLabel: "",
         codeValue: "", 
         
         // --- BUTTON 1 ---
-        buttonText: "Toll Free Number - +1 855-711-2157",
+        buttonText: "Toll Free Number +1 855-711-2157",
         buttonLink: "#enroll",
         openInNewTab: false,
         
@@ -96,7 +96,7 @@ const popupConfig = {
         bgColor: "#fefcf9",
         overlayColor: "rgba(45, 55, 72, 0.85)",
         titleFontSize: "1.5rem",
-        bodyFontSize: "1.0rem",
+        bodyFontSize: "0.9rem",
         buttonFontSize: "0.8rem",
         buttonBg: "#000000",        // Button 1 Background
         buttonText: "#ffffff",      // Button 1 Text
