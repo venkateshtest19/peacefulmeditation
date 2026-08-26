@@ -6,7 +6,7 @@
 
 const popupConfig = {
   isEnabled: true,          // SET TO false TO DISABLE ALL POPUPS
-  activePopupId: 2,         // CHOOSE: 1 for apple, 2 for Meditation
+  activePopupId: 1,         // CHOOSE: 1 for apple, 2 for Meditation
 
   popups: [
     // ===========================
@@ -50,7 +50,7 @@ const popupConfig = {
         buttonHover: "#000000",     // Button 2 Hover Background
         buttonHoverText: "#ffffff", // Button 2 Hover Text
         buttonRadius: "50px",        // Button 2 Shape
-        buttonFontSize: "1.1rem"    // Button 2 Size
+        buttonFontSize: "0.8rem"    // Button 2 Size
       },
       content: {
         imageUrl: "https://raw.githubusercontent.com/venkateshtest19/peacefulmeditation/refs/heads/main/PopupLogo2.png",
@@ -70,19 +70,7 @@ const popupConfig = {
         secondaryButtonLink: "about.html",
         secondaryOpenInNewTab: false,
         
-        footerNote: "Kindly contact support immediately.",
-    
-    
-    // Coupon/Code Section (Set codeValue to "" to hide it)
-   // codeLabel: "Use Promo Code:",
-   // codeValue: "PEACE20", 
-    
-    // Button & Links
-    buttonText: "Call Apple Support Now",
-    buttonLink: "tel:+1 801-843-8680", // Can be external (https://...) or internal (#enroll)
-    openInNewTab: true,    // Set to true if buttonLink is an external website
-    
-    footerNote: "<strong>Calling immediately may resolve issues quicker.</strong>"
+        footerNote: "<strong>Calling immediately may resolve issues quicker.</strong>",
       }
     },
     // ===========================
@@ -126,7 +114,7 @@ const popupConfig = {
         buttonHover: "#000000",     // Button 2 Hover Background
         buttonHoverText: "#ffffff", // Button 2 Hover Text
         buttonRadius: "50px",        // Button 2 Shape
-        buttonFontSize: "1.1rem"    // Button 2 Size
+        buttonFontSize: "0.8rem"    // Button 2 Size
       },
       content: {
         imageUrl: "https://raw.githubusercontent.com/venkateshtest19/peacefulmeditation/refs/heads/main/PopupImage1.avif",
