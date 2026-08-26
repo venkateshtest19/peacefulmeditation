@@ -154,7 +154,45 @@
         
         ${codeHtml}
         
-        <a href="${c.buttonLink}" ${targetAttr} class="pm-btn-primary" onclick="closePMPopup()">${c.buttonText}</a>
+           // Determine if links open in new tab
+    const targetAttr1 = c.openInNewTab ? 'target="_blank" rel="noopener"' : '';
+    const targetAttr2 = c.secondaryOpenInNewTab ? 'target="_blank" rel="noopener"' : '';
+
+    // Conditional Code Badge
+    const codeHtml = c.codeValue ? `
+      <div class="pm-code-container">
+        <span class="pm-code-label">${c.codeLabel}</span>
+        <span class="pm-code-badge">${c.codeValue}</span>
+      </div>
+    ` : '';
+
+    // Conditional Second Button
+    const secondBtnHtml = c.secondaryButtonText ? `
+      <a href="${c.secondaryButtonLink}" ${targetAttr2} class="pm-btn-secondary" onclick="closePMPopup()">
+        ${c.secondaryButtonText}
+      </a>
+    ` : '';
+
+    overlay.innerHTML = `
+      <div class="pm-popup-box">
+        <button id="pm-close-x" class="pm-close-btn" aria-label="Close">×</button>
+        
+        ${c.imageUrl ? `<img src="${c.imageUrl}" alt="${c.imageAlt}" class="pm-popup-img">` : ''}
+        
+        <h3 class="pm-popup-title">${c.title}</h3>
+        <p class="pm-popup-msg">${c.message}</p>
+        
+        ${codeHtml}
+        
+        <!-- Primary Button -->
+        <a href="${c.buttonLink}" ${targetAttr1} class="pm-btn-primary" onclick="closePMPopup()">${c.buttonText}</a>
+        
+        <!-- Secondary Button (Only shows if text is provided) -->
+        ${secondBtnHtml}
+        
+        <p class="pm-footer-note">${c.footerNote}</p>
+      </div>
+    `;
         <p class="pm-footer-note">${c.footerNote}</p>
       </div>
     `;
