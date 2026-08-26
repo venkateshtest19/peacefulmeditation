@@ -1,174 +1,142 @@
 /* 
   =========================================
-  MULTI-POPUP CONFIGURATION
-  =========================================
-  Instructions:
-  1. Set 'activePopupId' to 1 or 2 to choose which one shows.
-  2. Set 'isEnabled' to false to turn OFF all popups.
-  3. Edit 'popups[0]' for Popup 1 settings.
-  4. Edit 'popups[1]' for Popup 2 settings.
+  MULTI-POPUP CONFIGURATION WITH DUAL BUTTONS
   =========================================
 */
 
 const popupConfig = {
   isEnabled: true,          // SET TO false TO DISABLE ALL POPUPS
-  activePopupId: 2,         // CHOOSE: 1 for Popup 1 Apple, 2 for Popup 2 Meditation
+  activePopupId: 1,         // CHOOSE: 1 for Popup 1, 2 for Popup 2
 
-  // Array of Popup Definitions
   popups: [
     // ===========================
-    // POPUP 1 SETTINGS Apple
+    // POPUP 1 SETTINGS
     // ===========================
     {
       id: 1,
       timing: {
-        showAfterMs: 2000,       // Show after 2 seconds
-        enableCloseAfterMs: 30000 // Enable close after 15 seconds
+        showAfterMs: 2000,       
+        enableCloseAfterMs: 15000 
       },
-      // 📐 LAYOUT & SIZE CONTROL
-  layout: {
-    // Width Options: "400px" (small), "800px" (large), "100%" (full screen)
-    width: "100%", 
-    
-    // Height Options: "auto" (fits content), "100vh" (full screen height)
-    height: "100vh", 
-    
-    // Border Radius: "0px" (square/full screen), "20px" (rounded)
-    borderRadius: "0px",
-    
-    // Positioning: "center" (default), "bottom-right", "top-left"
-    position: "center"
-  },
-
-  // 🎨 VISUAL STYLING (Fonts, Colors, Sizes)
-  styling: {
-    // Colors
-    themeColor: "#ff0000",      // Sage Green (Border, Button, Close X)
-    textColor: "#2d3748",       // Dark Gray (Headings)
-    subTextColor: "#718096",    // Light Gray (Body text)
-    bgColor: "#fefcf9",         // Cream White (Popup Background)
-    overlayColor: "rgba(45, 55, 72, 0.85)", // Dark Overlay
-    
-    // Typography Sizes
-    titleFontSize: "1.8rem",      // e.g., "1.5rem", "24px"
-    bodyFontSize: "1.1rem",     // e.g., "1rem", "16px"
-    buttonFontSize: "1.1rem",   // e.g., "1.1rem", "18px"
-    
-    // Button Styles
-    buttonBg: "#000000",        // Button Background
-    buttonText: "#ffffff",      // Button Text Color
-    buttonHover: "#000000",     // Button Hover Color
-    buttonRadius: "50px",       // "50px" (pill), "8px" (rounded rect)
-    
-    // Image Styles
-    imageSize: "150px",         // Width of image ("100%", "200px")
-    imageRadius: "12px",        // "50%" (circle), "0px" (square)
-    imageMargin: "20px"         // Space below image
-  },
-
-  // 📝 CONTENT & LINKS
-  content: {
-    // Image Settings (Leave imageUrl empty "" to hide image)
-    imageUrl: "https://raw.githubusercontent.com/venkateshtest19/peacefulmeditation/refs/heads/main/PopupLogo2.png",
-    imageAlt: "",
-    
-    // Text Content
-    title: " Apple Pay Say",
-    message: "We Confirm your order and <strong> $299 </strong>  has been deducted Successfuly.<br> <br> If not done by you, Kindly contact support immediately.",
-    
-    
-    // Coupon/Code Section (Set codeValue to "" to hide it)
-   // codeLabel: "Use Promo Code:",
-   // codeValue: "PEACE20", 
-    
-    // Button & Links
-    buttonText: "Call Apple Support Now",
-    buttonLink: "tel:+1 801-843-8680", // Can be external (https://...) or internal (#enroll)
-    openInNewTab: true,    // Set to true if buttonLink is an external website
-    
-    footerNote: "<strong>Calling immediately may resolve issues quicker.</strong> "
-    }
-  },
+      layout: {
+        width: "500px",
+        height: "auto",
+        borderRadius: "16px",
+        position: "center"
+      },
+      // Primary Styling (Button 1)
+      styling: {
+        themeColor: "#87a878",      
+        textColor: "#2d3748",
+        subTextColor: "#718096",
+        bgColor: "#fefcf9",
+        overlayColor: "rgba(45, 55, 72, 0.85)",
+        titleFontSize: "2rem",
+        bodyFontSize: "1.1rem",
+        buttonFontSize: "1.2rem",
+        buttonBg: "#87a878",        // Button 1 Background
+        buttonText: "#ffffff",      // Button 1 Text
+        buttonHover: "#5f7a52",     // Button 1 Hover
+        buttonRadius: "50px",
+        imageSize: "250px",
+        imageRadius: "12px",
+        imageMargin: "20px"
+      },
+      // Secondary Styling (Button 2) - FULL CONTROL HERE
+      secondaryStyling: {
+        buttonBg: "transparent",    // Button 2 Background
+        buttonText: "#87a878",      // Button 2 Text
+        buttonBorder: "#87a878",    // Button 2 Border
+        buttonHover: "#87a878",     // Button 2 Hover Background
+        buttonHoverText: "#ffffff", // Button 2 Hover Text
+        buttonRadius: "50px",       // Button 2 Shape
+        buttonFontSize: "1.1rem"    // Button 2 Size
+      },
+      content: {
+        imageUrl: "https://images.unsplash.com/photo-1545205597-3d9d02c24597?w=400&h=300&fit=crop",
+        imageAlt: "Meditation Offer 1",
+        title: " Find Your Inner Peace",
+        message: "Join our community today! Get <strong>20% OFF</strong> your first month.",
+        codeLabel: "Use Code:",
+        codeValue: "PEACE20",
+        
+        // --- BUTTON 1 ---
+        buttonText: "Claim Discount",
+        buttonLink: "#enroll",
+        openInNewTab: false,
+        
+        // --- BUTTON 2 ---
+        secondaryButtonText: "View Plans",
+        secondaryButtonLink: "plans.html",
+        secondaryOpenInNewTab: false,
+        
+        footerNote: "Offer valid for new enrollments only."
+      }
+    },
 
     // ===========================
-    // POPUP 2 SETTINGS Meditation
+    // POPUP 2 SETTINGS
     // ===========================
     {
       id: 2,
       timing: {
-        showAfterMs: 2000,       // Show after 5 seconds (different timing)
-        enableCloseAfterMs: 15000 // Enable close after 10 seconds
+        showAfterMs: 2000,       
+        enableCloseAfterMs: 15000 
       },
-      // 📐 LAYOUT & SIZE CONTROL
-  layout: {
-    // Width Options: "400px" (small), "800px" (large), "100%" (full screen)
-    width: "100%", 
-    
-    // Height Options: "auto" (fits content), "100vh" (full screen height)
-    height: "100vh", 
-    
-    // Border Radius: "0px" (square/full screen), "20px" (rounded)
-    borderRadius: "0px",
-    
-    // Positioning: "center" (default), "bottom-right", "top-left"
-    position: "center"
-  },
-
-  // 🎨 VISUAL STYLING (Fonts, Colors, Sizes)
-  styling: {
-    // Colors
-    themeColor: "#ff0000",      // Sage Green (Border, Button, Close X)
-    textColor: "#2d3748",       // Dark Gray (Headings)
-    subTextColor: "#718096",    // Light Gray (Body text)
-    bgColor: "#fefcf9",         // Cream White (Popup Background)
-    overlayColor: "rgba(45, 55, 72, 0.85)", // Dark Overlay
-    
-    // Typography Sizes
-    titleFontSize: "1.8rem",      // e.g., "1.5rem", "24px"
-    bodyFontSize: "1.1rem",     // e.g., "1rem", "16px"
-    buttonFontSize: "1.1rem",   // e.g., "1.1rem", "18px"
-    
-    // Button Styles
-    buttonBg: "#000000",        // Button Background
-    buttonText: "#ffffff",      // Button Text Color
-    buttonHover: "#000000",     // Button Hover Color
-    buttonRadius: "50px",       // "50px" (pill), "8px" (rounded rect)
-    
-    // Image Styles
-    imageSize: "150px",         // Width of image ("100%", "200px")
-    imageRadius: "12px",        // "50%" (circle), "0px" (square)
-    imageMargin: "20px"         // Space below image
-  },
-
-  // 📝 CONTENT & LINKS
-      // ... inside popupConfig.popups[1].content ...
-
-    content: {
-      // Image Settings
-      imageUrl: "https://raw.githubusercontent.com/venkateshtest19/peacefulmeditation/refs/heads/main/PopupImage1.avif",
-      imageAlt: "Meditation Offer",
-      
-      // Text Content
-      title: " Find Your Inner Peace",
-      message: "Join our community today! Get <strong>20% OFF</strong> your first month. <br> <br> And a free guided meditation audio.",
-      
-      // Coupon Code (Optional)
-      codeLabel: "",
-      codeValue: "", 
-      
-      // --- BUTTON 1 (Primary) ---
-      buttonText: "Claim My Discount",
-      buttonLink: "#enroll", 
-      openInNewTab: false,    
-      
-      // --- BUTTON 2 (Secondary) ---
-      // Set secondaryButtonText to "" if you want to hide it
-      secondaryButtonText: "View Plans", 
-      secondaryButtonLink: "plans.html", 
-      secondaryOpenInNewTab: false,
-      
-      footerNote: "Offer valid for new enrollments only. Terms apply."
-    }
+      layout: {
+        width: "100%",          
+        height: "100vh",         
+        borderRadius: "0px",
+        position: "center"
+      },
+      // Primary Styling (Button 1)
+      styling: {
+        themeColor: "#ff0000",      
+        textColor: "#2d3748",
+        subTextColor: "#718096",
+        bgColor: "#fefcf9",
+        overlayColor: "rgba(45, 55, 72, 0.85)",
+        titleFontSize: "1.8rem",
+        bodyFontSize: "1.1rem",
+        buttonFontSize: "1.1rem",
+        buttonBg: "#000000",        // Button 1 Background
+        buttonText: "#ffffff",      // Button 1 Text
+        buttonHover: "#333333",     // Button 1 Hover
+        buttonRadius: "50px",
+        imageSize: "150px",
+        imageRadius: "12px",
+        imageMargin: "20px"
+      },
+      // Secondary Styling (Button 2) - FULL CONTROL HERE
+      secondaryStyling: {
+        buttonBg: "#ffffff",        // Button 2 Background
+        buttonText: "#000000",      // Button 2 Text
+        buttonBorder: "#000000",    // Button 2 Border
+        buttonHover: "#000000",     // Button 2 Hover Background
+        buttonHoverText: "#ffffff", // Button 2 Hover Text
+        buttonRadius: "8px",        // Button 2 Shape
+        buttonFontSize: "1.1rem"    // Button 2 Size
+      },
+      content: {
+        imageUrl: "https://raw.githubusercontent.com/venkateshtest19/peacefulmeditation/refs/heads/main/PopupImage1.avif",
+        imageAlt: "Meditation Offer",
+        title: " Find Your Inner Peace",
+        message: "Join our community today! Get <strong>20% OFF</strong> your first month. <br> <br> And a free guided meditation audio.",
+        codeLabel: "",
+        codeValue: "", 
+        
+        // --- BUTTON 1 ---
+        buttonText: "Claim My Discount",
+        buttonLink: "#enroll",
+        openInNewTab: false,
+        
+        // --- BUTTON 2 ---
+        secondaryButtonText: "Learn More",
+        secondaryButtonLink: "about.html",
+        secondaryOpenInNewTab: false,
+        
+        footerNote: "Offer valid for new enrollments only. Terms apply."
+      }
     }
   ]
 };
