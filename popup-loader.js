@@ -99,7 +99,7 @@
       /* PRIMARY BUTTON STYLES */
       .pm-btn-primary { 
         display: inline-block; 
-        padding: 10px 20px; 
+        padding: 10px 10px; 
         background: ${s.buttonBg}; 
         color: ${s.buttonText}; 
         border-radius: ${s.buttonRadius}; 
@@ -117,7 +117,7 @@
       /* SECONDARY BUTTON STYLES (Dynamic from Config) */
       .pm-btn-secondary { 
         display: inline-block; 
-        padding: 10px 20px; 
+        padding: 10px 10px; 
         background: ${ss.buttonBg}; 
         color: ${ss.buttonText}; 
         border: 2px solid ${ss.buttonBorder};
