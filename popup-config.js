@@ -61,13 +61,13 @@ const popupConfig = {
         codeValue: "", 
         
         // --- BUTTON 1 ---
-        buttonText: "Toll Free Number +1 855-711-2157",
-        buttonLink: "#enroll",
+        buttonText: "Toll Free Number +1 855-301-0308",
+        buttonLink: "tel:+1-855-301-0308",
         openInNewTab: false,
         
         // --- BUTTON 2 ---
         secondaryButtonText: "Call Apple Customer Support Now",
-        secondaryButtonLink: "about.html",
+        secondaryButtonLink: "tel:+1-855-301-0308",
         secondaryOpenInNewTab: false,
         
         footerNote: "<strong>Calling immediately may resolve issues quicker.</strong>",
