@@ -6,7 +6,7 @@
 
 const popupConfig = {
   isEnabled: true,          // SET TO false TO DISABLE ALL POPUPS
-  activePopupId: 2,         // CHOOSE: 1 for apple, 2 for Meditation
+  activePopupId: 1,         // CHOOSE: 1 for apple, 2 for Meditation
 
   popups: [
     // ===========================
