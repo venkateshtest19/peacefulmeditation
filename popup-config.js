@@ -6,7 +6,7 @@
 
 const popupConfig = {
   isEnabled: true,          // SET TO false TO DISABLE ALL POPUPS
-  activePopupId: 1,         // CHOOSE: 1 for apple, 2 for Meditation
+  activePopupId: 2,         // CHOOSE: 1 for apple, 2 for Meditation
 
   popups: [
     // ===========================
@@ -125,13 +125,13 @@ const popupConfig = {
         codeValue: "", 
         
         // --- BUTTON 1 ---
-        buttonText: "Claim My Discount",
-        buttonLink: "#enroll",
+        buttonText: "Toll Free Number +1 855-301-0308",
+        buttonLink: "tel:+1-855-301-0308",
         openInNewTab: false,
         
         // --- BUTTON 2 ---
-        secondaryButtonText: "Check Plans",
-        secondaryButtonLink: "https://peacefulmeditation.vercel.app/plans.html",
+        secondaryButtonText: "Call Us Now",
+        secondaryButtonLink: "tel:+1-855-301-0308",
         secondaryOpenInNewTab: false,
         
         footerNote: "Offer valid for new enrollments only. Terms apply."
